@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Login - SupportDesk{% endblock %}
+
+{% block content %}
+<h1>Login to SupportDesk</h1>
+<p>Enter your account details below.</p>
+
+<form action="/dashboard">
+    <input type="text" placeholder="Username or Email">
+    <input type="password" placeholder="Password">
+    <button type="submit" class="btn">Login</button>
+</form>
+
+<p><a href="/">Back to Home</a></p>
+{% endblock %}

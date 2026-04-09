@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 80px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+h1 {
+    color: #1f3c88;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #333;
+    font-size: 18px;
+}
+.button-group {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #1f3c88;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    margin: 0 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+    .btn:hover {
+        background-color: #162d66;
+    }
+form {
+    margin-top: 25px;
+}
+
+input {
+    display: block;
+    width: 60%;
+    margin: 15px auto;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+select,
+textarea {
+    display: block;
+    width: 60%;
+    margin: 15px auto;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+.ticket-list {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.ticket-card {
+    background: #f9fafb;
+    border: 1px solid #dcdfe4;
+    border-left: 6px solid #1f3c88;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+    .ticket-card h3 {
+        margin-top: 0;
+        color: #1f3c88;
+    }
+
+    .ticket-card p {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+.status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+    .status.open {
+        background-color: #fdecea;
+        color: #b42318;
+    }
+
+    .status.progress {
+        background-color: #fff4e5;
+        color: #b26a00;
+    }
+
+    .status.resolved {
+        background-color: #e8f5e9;
+        color: #1b5e20;
+    }
+.navbar {
+    background-color: #1f3c88;
+    color: white;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+    .nav-links a:hover {
+        text-decoration: underline;
+    }
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #555;
+    font-size: 14px;
+}

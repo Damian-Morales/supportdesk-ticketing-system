@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - SupportDesk{% endblock %}
+
+{% block content %}
+<h1>SupportDesk Dashboard</h1>
+<p>Welcome to your dashboard. This is where tickets will appear.</p>
+
+<div class="button-group">
+    <a href="/create-ticket" class="btn">Create Ticket</a>
+    <a href="/" class="btn">Log Out</a>
+</div>
+
+<div class="ticket-list">
+    <div class="ticket-card">
+        <h3>Password Reset Request</h3>
+        <p><strong>Category:</strong> Account Access</p>
+        <p><strong>Priority:</strong> High</p>
+        <p><strong>Status:</strong> <span class="status open">Open</span></p>
+    </div>
+
+    <div class="ticket-card">
+        <h3>Wi-Fi Not Connecting</h3>
+        <p><strong>Category:</strong> Network</p>
+        <p><strong>Priority:</strong> Medium</p>
+        <p><strong>Status:</strong> <span class="status progress">In Progress</span></p>
+    </div>
+
+    <div class="ticket-card">
+        <h3>Software Installation Help</h3>
+        <p><strong>Category:</strong> Software</p>
+        <p><strong>Priority:</strong> Low</p>
+        <p><strong>Status:</strong> <span class="status resolved">Resolved</span></p>
+    </div>
+</div>
+{% endblock %}

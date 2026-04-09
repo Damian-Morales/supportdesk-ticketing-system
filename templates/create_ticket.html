@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Create Ticket - SupportDesk{% endblock %}
+
+{% block content %}
+<h1>Create a Support Ticket</h1>
+<p>Fill out the form below to submit a new ticket.</p>
+
+<form action="/dashboard">
+    <input type="text" placeholder="Ticket Title">
+
+    <input type="text" placeholder="Category">
+
+    <select>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+    </select>
+
+    <select>
+        <option>Open</option>
+        <option>In Progress</option>
+        <option>Resolved</option>
+    </select>
+
+    <textarea placeholder="Describe your issue"></textarea>
+
+    <button type="submit" class="btn">Submit Ticket</button>
+</form>
+
+<p><a href="/dashboard">Back to Dashboard</a></p>
+{% endblock %}
