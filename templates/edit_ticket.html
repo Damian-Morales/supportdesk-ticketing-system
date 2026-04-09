@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Ticket - SupportDesk{% endblock %}
+
+{% block content %}
+    <h1>Edit Ticket</h1>
+    <p>Update the ticket information below.</p>
+
+    <form method="POST">
+        <input type="text" name="title" value="{{ ticket['title'] }}" required>
+
+        <input type="text" name="category" value="{{ ticket['category'] }}" required>
+
+        <select name="priority" required>
+            <option {% if ticket['priority'] == 'Low' %}selected{% endif %}>Low</option>
+            <option {% if ticket['priority'] == 'Medium' %}selected{% endif %}>Medium</option>
+            <option {% if ticket['priority'] == 'High' %}selected{% endif %}>High</option>
+        </select>
+
+        <select name="status" required>
+            <option {% if ticket['status'] == 'Open' %}selected{% endif %}>Open</option>
+            <option {% if ticket['status'] == 'In Progress' %}selected{% endif %}>In Progress</option>
+            <option {% if ticket['status'] == 'Resolved' %}selected{% endif %}>Resolved</option>
+        </select>
+
+        <textarea name="description" required>{{ ticket['description'] }}</textarea>
+
+        <button type="submit" class="btn">Save Changes</button>
+    </form>
+
+    <p><a href="/dashboard">Back to Dashboard</a></p>
+{% endblock %}

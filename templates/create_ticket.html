@@ -6,24 +6,26 @@
 <h1>Create a Support Ticket</h1>
 <p>Fill out the form below to submit a new ticket.</p>
 
-<form action="/dashboard">
-    <input type="text" placeholder="Ticket Title">
+<form method="POST">
+    <input type="text" name="title" placeholder="Ticket Title" required>
 
-    <input type="text" placeholder="Category">
+    <input type="text" name="category" placeholder="Category" required>
 
-    <select>
+    <select name="priority" required>
+        <option value="">Select Priority</option>
         <option>Low</option>
         <option>Medium</option>
         <option>High</option>
     </select>
 
-    <select>
+    <select name="status" required>
+        <option value="">Select Status</option>
         <option>Open</option>
         <option>In Progress</option>
         <option>Resolved</option>
     </select>
 
-    <textarea placeholder="Describe your issue"></textarea>
+    <textarea name="description" placeholder="Describe your issue" required></textarea>
 
     <button type="submit" class="btn">Submit Ticket</button>
 </form>

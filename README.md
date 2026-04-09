@@ -8,9 +8,12 @@ It allows users to navigate through a simple support workflow with login, regist
 - Home page with navigation
 - Login page
 - Register page
-- Dashboard with sample support tickets
-- Create Ticket form
+- Dashboard with real support tickets
+- Create ticket form
+- Edit existing tickets
+- Delete tickets
 - Status labels for Open, In Progress, and Resolved tickets
+- Store ticket data using SQLite
 - Clean user interface with reusable Flask templates
 
 ## Tech Stack
@@ -55,13 +58,6 @@ I built this project to strengthen my portfolio for entry-level software enginee
 - frontend styling
 - basic help desk workflow design
 
-## Future Improvements
-
-- Add real authentication
-- Store tickets in a database
-- Allow users to submit and save real tickets
-- Add ticket editing and status updates
-- Add admin and user roles
 
 ## Screenshots
 
@@ -79,3 +75,6 @@ I built this project to strengthen my portfolio for entry-level software enginee
 
 ### Create Ticket Page
 ![Create Ticket Page](screenshots/create-ticket-page.png)
+
+### Edit Ticket Page
+![Edit Ticket Page](screenshots/edit-ticket-page.png)

@@ -12,25 +12,32 @@
 </div>
 
 <div class="ticket-list">
+    {% if tickets %}
+    {% for ticket in tickets %}
     <div class="ticket-card">
-        <h3>Password Reset Request</h3>
-        <p><strong>Category:</strong> Account Access</p>
-        <p><strong>Priority:</strong> High</p>
-        <p><strong>Status:</strong> <span class="status open">Open</span></p>
-    </div>
+        <h3>{{ ticket["title"] }}</h3>
+        <p><strong>Category:</strong> {{ ticket["category"] }}</p>
+        <p><strong>Priority:</strong> {{ ticket["priority"] }}</p>
+        <p>
+            <strong>Status:</strong>
+            <span class="status
+                            {% if ticket['status'] == 'Open' %}open{% endif %}
+                            {% if ticket['status'] == 'In Progress' %}progress{% endif %}
+                            {% if ticket['status'] == 'Resolved' %}resolved{% endif %}
+                        ">
+                {{ ticket["status"] }}
+            </span>
+        </p>
+        <p><strong>Description:</strong> {{ ticket["description"] }}</p
 
-    <div class="ticket-card">
-        <h3>Wi-Fi Not Connecting</h3>
-        <p><strong>Category:</strong> Network</p>
-        <p><strong>Priority:</strong> Medium</p>
-        <p><strong>Status:</strong> <span class="status progress">In Progress</span></p>
+        <div class="btns">
+            <a href="/edit-ticket/{{ ticket['id'] }}" class="btn">Edit</a>
+            <a href="/delete-ticket/{{ ticket['id'] }}" class="btn delete-btn">Delete</a>
+        </div>
     </div>
-
-    <div class="ticket-card">
-        <h3>Software Installation Help</h3>
-        <p><strong>Category:</strong> Software</p>
-        <p><strong>Priority:</strong> Low</p>
-        <p><strong>Status:</strong> <span class="status resolved">Resolved</span></p>
-    </div>
+    {% endfor %}
+    {% else %}
+    <p>No tickets submitted yet.</p>
+    {% endif %}
 </div>
 {% endblock %}
