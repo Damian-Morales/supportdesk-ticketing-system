@@ -62,3 +62,20 @@ I built this project to strengthen my portfolio for entry-level software enginee
 - Allow users to submit and save real tickets
 - Add ticket editing and status updates
 - Add admin and user roles
+
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/home-page.png)
+
+### Register Page
+![Register Page](screenshots/register-page.png)
+
+### Login Page
+![Login Page](screenshots/login-page.png)
+
+### Dashboard Page
+![Dashboard Page](screenshots/dashboard-page.png)
+
+### Create Ticket Page
+![Create Ticket Page](screenshots/create-ticket-page.png)
